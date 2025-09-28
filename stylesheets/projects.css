@@ -1,0 +1,209 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    background-color: rgb(248, 243, 206);
+}
+
+/* HEADER */
+header {
+    background-color: rgb(221, 218, 208);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .25);
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+.header1 {
+    font-weight: 600;
+}
+
+.name {
+    color: rgb(84, 70, 58);
+    font-weight: bold;
+}
+
+.bscs {
+    color: rgb(102, 101, 92);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+li {
+    margin: 0 15px;
+    font-family: montserrat, sans-serif;
+    font-size: 15.5px;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(87, 86, 79);
+    font-weight: bold;
+    transition: color 0.15s;
+}
+
+li a:hover {
+    color: rgb(131, 141, 125);
+}
+
+.active {
+    color: rgb(131, 141, 125);
+}
+
+/* ABOUT SECTION */
+.about {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 40px; /* push content below header */
+}
+
+.about .content {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.about .content img {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
+}
+
+.text {
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.text h1 {
+    color: rgb(131, 141, 125);
+    font-size: 85px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.text h5 {
+    color: rgb(107, 116, 102);
+    font-size: 25px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.text p {
+    color: black;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+    text-align: justify;
+}
+
+/* 📱 RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+    .about .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 60px;
+    }
+
+    .text h5 {
+        font-size: 22px;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    header ul {
+        margin-top: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    li {
+        margin: 8px;
+        font-size: 14px;
+    }
+
+    .text h1 {
+        font-size: 45px;
+    }
+
+    .text h5 {
+        font-size: 20px;
+    }
+
+    .text p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 100px 15px 30px;
+    }
+
+    .text h1 {
+        font-size: 32px;
+    }
+
+    .text h5 {
+        font-size: 18px;
+    }
+
+    .text p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    header {
+        align-items: center;
+        text-align: center;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

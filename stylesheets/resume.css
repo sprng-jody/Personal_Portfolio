@@ -1,0 +1,213 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+body {
+  background-color: rgb(248, 243, 206);
+  font-family: poppins, sans-serif;
+  margin: 0;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: rgb(221, 218, 208);
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .25);
+  z-index: 999;
+}
+
+.header1 {
+  font-weight: 600;
+}
+
+.name {
+  color: rgb(84,70,58);
+  font-weight: bold;
+}
+
+.bscs {
+  color: rgb(102, 101, 92);
+}
+
+header li {
+  display: inline-block;
+  font-family: montserrat, sans-serif;
+  margin: 0 15px;
+  font-size: 15.5px;
+}
+
+header li a {
+  text-decoration: none;
+  color: rgb(87, 86, 79);
+  font-weight: bold;
+  transition: color 0.15s;
+}
+
+header li a:hover {
+  color: rgb(131, 141, 125);
+}
+
+.active {
+  color: rgb(131, 141, 125);
+}
+
+/* ===== RESUME LAYOUT ===== */
+.resume {
+  display: flex;
+  max-width: 900px;
+  margin: 120px auto 40px; /* space below fixed header */
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sidebar {
+  background: #eee;
+  width: 30%;
+  padding: 20px;
+}
+
+.sidebar img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.sidebar .section {
+  margin-top: 20px;
+}
+
+.sidebar h3 {
+  background: #c0b9b9;
+  padding: 5px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.main {
+  width: 70%;
+  padding: 30px;
+}
+
+.main h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.main-content h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.edu-block {
+  display: flex;
+  margin-top: 15px;
+}
+
+.edu-block .year {
+  width: 100px;
+  font-weight: bold;
+}
+
+.educ-year {
+  font-weight: bold;
+}
+
+.profile {
+  margin-bottom: 30px;
+}
+
+.profile-text {
+  text-align: justify;
+}
+
+.button {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  text-align: center;
+  background-color: rgb(131, 141, 125);
+  color: rgb(238, 235, 224);
+  border: 2px solid transparent;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.button:hover {
+  background-color: transparent;
+  border: 2px solid rgb(131, 141, 125);
+  color: rgb(131, 141, 125);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* ===== RESPONSIVENESS ===== */
+
+/* Tablet (≤ 900px) */
+@media (max-width: 900px) {
+  .resume {
+    flex-direction: column;
+    max-width: 95%;
+  }
+  .sidebar, .main {
+    width: 100%;
+  }
+  .main {
+    padding: 20px;
+  }
+  .edu-block {
+    flex-direction: column;
+  }
+  .edu-block .year {
+    width: auto;
+    margin-bottom: 5px;
+  }
+}
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+  header ul {
+    margin-top: 10px;
+  }
+  header li {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+  }
+  .main h1 {
+    font-size: 22px;
+  }
+  .main-content h2 {
+    font-size: 18px;
+  }
+  .sidebar h3 {
+    font-size: 14px;
+  }
+  .button {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+}

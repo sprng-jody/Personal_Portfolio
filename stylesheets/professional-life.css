@@ -1,0 +1,245 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    background-color: rgb(248, 243, 206);
+}
+
+/* HEADER */
+header {
+    background-color: rgb(221, 218, 208);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .25);
+    flex-wrap: wrap;
+    z-index: 10;
+}
+
+.header1 {
+    font-weight: 600;
+}
+
+.name {
+    color: rgb(84, 70, 58);
+    font-weight: bold;
+}
+
+.bscs {
+    color: rgb(102, 101, 92);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+li {
+    margin: 0 15px;
+    font-family: montserrat, sans-serif;
+    font-size: 15.5px;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(87, 86, 79);
+    font-weight: bold;
+    transition: color 0.15s;
+}
+
+li a:hover {
+    color: rgb(131, 141, 125);
+}
+
+.active {
+    color: rgb(131, 141, 125);
+}
+
+/* ABOUT SECTION */
+.about {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 40px; /* leave space for header */
+}
+
+.about .content {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.about .content img {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.25);
+}
+
+.text {
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.text h5 {
+    color: #6B7BA3;
+    font-size: 25px;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.text p {
+    color: #4C8C8C;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+    text-align: justify;
+}
+
+/* FOOTER + PAGINATION */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 10px;
+}
+
+.pagination {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.pagination_item {
+    position: relative;
+    list-style: none;
+}
+
+.pagination_link {
+    position: relative;
+    font-weight: bold;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    color: #353535;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.pagination_item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgb(179, 179, 179);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+.pagination_item--active::before {
+    opacity: 1;
+}
+
+.pagination_item:hover::before {
+    opacity: 0.7;
+}
+
+/* 📱 RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+    .about .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header ul {
+        margin-top: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    li {
+        margin: 8px;
+    }
+
+    .text h5 {
+        font-size: 20px;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+
+    .pagination_link {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 100px 15px 30px;
+    }
+
+    .text h5 {
+        font-size: 18px;
+    }
+
+    .text p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .pagination {
+        gap: 10px;
+    }
+
+    .pagination_link {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+}
