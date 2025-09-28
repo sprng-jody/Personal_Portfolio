@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body{
+    background-color: rgb(248, 243, 206);
+}
+
+header {
+    background-color: rgb(221, 218, 208);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .25);
+}
+
+    .header1{
+        font-family: Poppins;
+        font-weight: 600;
+    }
+
+    .name{
+        color:rgb(84,70,58);
+        font-weight: bold;
+    }
+    
+    .bscs{
+        color: rgb(102, 101, 92);
+    }
+
+    li {
+        display: inline-block;
+        font-family: montserrat;
+        margin: 0 15px;
+        font-size: 15.5px;
+    }
+
+    li a {
+        text-decoration: none;
+        color: rgb(87, 86, 79);
+        font-weight: bold;
+        transition: color 0.15s, text-decoration 0.15s;
+    }
+
+    li a:hover {
+        text-decoration: none;
+        color: rgb(131, 141, 125);
+    }
+
+    .active{
+        color: rgb(131, 141, 125);
+    }
+
+.cards{
+    width: 75%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.card{
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: aliceblue;
+    padding: 15px;
+}
+
+.content{
+    text-align: center;
+    padding: 10px;
+}
+
+.content h2{
+    margin-top: 5px;
+    letter-spacing: 1.5px;
+}
+
+
+.content p{
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/* Tablet screens (≤ 992px) */
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    width: 90%;
+  }
+
+  header {
+    height:  13%;
+  }
+
+  header ul {
+    font-size: 10px
+  }
+}
+
+/* Mobile screens (≤ 600px) */
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr; /* 1 card per row */
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .content h2 {
+    font-size: 18px;
+  }
+
+  .content h3 {
+    font-size: 15px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+}
